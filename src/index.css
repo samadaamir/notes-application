@@ -1,0 +1,150 @@
+/* Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Inter", "Segoe UI", sans-serif;
+}
+
+body {
+  background: #f8f9fb;
+  color: #1f2937;
+}
+
+/* Layout */
+.app-container {
+  display: flex;
+  gap: 30px;
+  padding: 40px;
+  min-height: 100vh;
+}
+
+/* Form Section */
+.form {
+  flex: 1;
+  background: #ffffff;
+  padding: 25px;
+  border-radius: 14px;
+  border: 1px solid #e5e7eb;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  height: fit-content;
+}
+
+.form input,
+.form textarea {
+  width: 100%;
+  margin-bottom: 14px;
+  padding: 12px 14px;
+  border-radius: 10px;
+  border: 1px solid #e5e7eb;
+  outline: none;
+  font-size: 14px;
+  background: #fafafa;
+  transition: 0.2s;
+}
+
+.form input:focus,
+.form textarea:focus {
+  border-color: #9ca3af;
+  background: #fff;
+}
+
+.form textarea {
+  min-height: 120px;
+  resize: none;
+}
+
+.form button {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 10px;
+  background: #111827;
+  color: #ffffff;
+  font-weight: 500;
+  cursor: pointer;
+  transition: 0.25s;
+}
+
+.form button:hover {
+  background: #000000;
+}
+
+/* Notes Section */
+.notes {
+  flex: 2;
+}
+
+.notes h2 {
+  margin-bottom: 18px;
+  font-size: 20px;
+  font-weight: 600;
+}
+
+/* Grid */
+.notes > div {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(260px, 1fr));
+  gap: 18px;
+}
+
+/* Card */
+.card {
+  background: #ffffff;
+  padding: 18px;
+  border-radius: 12px;
+  border: 1px solid #e5e7eb;
+  transition: 0.25s;
+}
+
+.card:hover {
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.06);
+  transform: translateY(-2px);
+}
+
+.card h3 {
+  margin-bottom: 6px;
+  font-size: 16px;
+  font-weight: 600;
+}
+
+.card p {
+  font-size: 14px;
+  color: #6b7280;
+}
+
+/* Delete Button */
+.deletebtn {
+  margin-top: 12px;
+  padding: 7px 12px;
+  border: none;
+  border-radius: 8px;
+  background: #f3f4f6;
+  color: #374151;
+  cursor: pointer;
+  font-size: 13px;
+  transition: 0.2s;
+}
+
+.deletebtn:hover {
+  background: #e5e7eb;
+}
+
+/* Tablet */
+@media (max-width: 900px) {
+  .app-container {
+    flex-direction: column;
+    padding: 25px;
+  }
+}
+
+/* Mobile */
+@media (max-width: 500px) {
+  .app-container {
+    padding: 15px;
+  }
+
+  .notes > div {
+    grid-template-columns: 1fr;
+  }
+}
