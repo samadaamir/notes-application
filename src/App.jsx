@@ -26,11 +26,10 @@ const App = () => {
 
   return (
     <div className='app-container'>
-
+      <h1>Your Notes</h1>
       <form className='form' onSubmit={(e)=>{
         submitForm(e)
       }}>
-              <h2>Add Note</h2>
         <input type='text' placeholder='Note Title'
         value={title}
         onChange={(e)=>{
